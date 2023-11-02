@@ -40,7 +40,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
     with TickerProviderStateMixin {
   late AnimationController animationController;
   late Size size;
-  double limitPercent = 0.85;
+  double limitPercent = 0.25;
   double upDownScaleAmount = 0;
   double radiusAmount = 0;
   double drawerRate = 0.0;
