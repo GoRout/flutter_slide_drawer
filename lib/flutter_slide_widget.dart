@@ -40,7 +40,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
     with TickerProviderStateMixin {
   late AnimationController animationController;
   late Size size;
-  double limitPercent = 0.25;
+  double limitPercent = 0.85;
   double upDownScaleAmount = 0;
   double radiusAmount = 0;
   double drawerRate = 0.0;
@@ -117,7 +117,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
     _setDrawerPadding();
   }
 
-  double get drawerPosition => (size.width * drawerRate);
+  double get drawerPosition => ((size.width - 300) * drawerRate);
 
   void updateDrawerRate(double rate) {
     if (rate > limitPercent) {
