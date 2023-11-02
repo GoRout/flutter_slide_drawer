@@ -78,7 +78,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   void _initOption() {
     option = widget.option ?? SliderDrawerOption();
-    debugPrint('DRAWER INIT: limitPercent: $limitPercent, size: $size');
     _direction = option.direction;
     switch (option.sliderEffectType) {
       case SliderEffectType.Rounded:
