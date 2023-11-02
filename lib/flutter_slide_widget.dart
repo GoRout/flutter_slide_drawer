@@ -78,6 +78,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   void _initOption() {
     option = widget.option ?? SliderDrawerOption();
+    debugPrint('DRAWER INIT: limitPercent: $limitPercent, size: $size');
     _direction = option.direction;
     switch (option.sliderEffectType) {
       case SliderEffectType.Rounded:
@@ -117,7 +118,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
     _setDrawerPadding();
   }
 
-  double get drawerPosition => (300 * drawerRate);
+  double get drawerPosition => (size.width * drawerRate);
 
   void updateDrawerRate(double rate) {
     if (rate > limitPercent) {
@@ -215,6 +216,12 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   @override
   Widget build(BuildContext context) {
+    // add relevant controllers and defaults
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      debugPrint(
+          'DRAWER INIT: limitPercent: $limitPercent, size: $size, calc: ${-size.width + drawerPosition}, widyh: ${size.width}, drawerPosition: $drawerPosition');
+    });
+
     return Material(
       child: Container(
         height: size.height,
