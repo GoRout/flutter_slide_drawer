@@ -40,7 +40,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
     with TickerProviderStateMixin {
   late AnimationController animationController;
   late Size size;
-  double limitPercent = 0.85;
+  double limitPercent = 1;
   double upDownScaleAmount = 0;
   double radiusAmount = 0;
   double drawerRate = 0.0;
@@ -218,7 +218,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
     // add relevant controllers and defaults
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       debugPrint(
-          'DRAWER INIT: limitPercent: $limitPercent, size: $size, calc: ${-size.width + drawerPosition}, widyh: ${size.width}, drawerPosition: $drawerPosition');
+          'DRAWER INIT: limitPercent: $limitPercent, size: $size, calc: ${-size.width + drawerPosition}, width: ${size.width}, drawerPosition: $drawerPosition');
     });
 
     return Material(
