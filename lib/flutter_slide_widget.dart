@@ -117,7 +117,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
     _setDrawerPadding();
   }
 
-  double get drawerPosition => ((size.width - 300) * drawerRate);
+  double get drawerPosition => (300 * drawerRate);
 
   void updateDrawerRate(double rate) {
     if (rate > limitPercent) {
