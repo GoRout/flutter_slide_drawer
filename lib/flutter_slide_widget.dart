@@ -45,7 +45,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   double drawerRate = 0.0;
   bool isOpened = false;
   bool dragPossible = false;
-  late double limitPercent = 0.30;
+  late double limitPercent = 0.45;
   late SliderDrawerDirection _direction;
   late SliderDrawerOption option;
   late EdgeInsetsGeometry drawerPadding;
