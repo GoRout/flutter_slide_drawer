@@ -215,12 +215,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   @override
   Widget build(BuildContext context) {
-    // add relevant controllers and defaults
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      debugPrint(
-          'DRAWER INIT: limitPercent: $limitPercent, size: $size, calc: ${-size.width + drawerPosition}, width: ${size.width}, drawerPosition: $drawerPosition');
-    });
-
     return Material(
       child: Container(
         height: size.height,
