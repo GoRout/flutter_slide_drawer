@@ -133,7 +133,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   void toggleDrawer() {
     print(
-        'INIT OPTIONS: limitPercent: $limitPercent, isOpened: $isOpened, size: ${size.width}, upDownScaleAmount: ${option.upDownScaleAmount}');
+        'TOGGLE DRAWER: limitPercent: $limitPercent, isOpened: $isOpened, size: ${size.width}, upDownScaleAmount: ${option.upDownScaleAmount}');
     if (isOpened) {
       animationController.reverse();
     } else {
