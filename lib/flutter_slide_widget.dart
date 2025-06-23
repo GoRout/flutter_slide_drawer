@@ -18,7 +18,7 @@ class SliderDrawerOption {
     this.backgroundImage,
     this.radiusAmount = 0,
     this.upDownScaleAmount = 0,
-    this.limitPercent = 0.45,
+    this.limitPercent = 0.80,
     this.direction = SliderDrawerDirection.LTR,
   });
 }
@@ -81,7 +81,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   void _initOption() {
     option = widget.option ?? SliderDrawerOption();
     _direction = option.direction;
-    limitPercent = size.width > 600 ? 0.55 : 0.80;
     switch (option.sliderEffectType) {
       case SliderEffectType.Rounded:
         upDownScaleAmount = option.upDownScaleAmount;
@@ -92,8 +91,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
         radiusAmount = 0;
         break;
     }
-    print(
-        'INIT OPTIONS: limitPercent: $limitPercent, isOpened: $isOpened, upDownScaleAmount: ${option.upDownScaleAmount}');
   }
 
   void _animationSetup() {
@@ -119,7 +116,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   void didChangeDependencies() {
     super.didChangeDependencies();
     size = MediaQuery.of(context).size;
-    limitPercent = size.width > 600 ? 0.55 : 0.80;
     _setDrawerPadding();
   }
 
@@ -134,8 +130,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   }
 
   void toggleDrawer() {
-    print(
-        'TOGGLE DRAWER: limitPercent: $limitPercent, isOpened: $isOpened, upDownScaleAmount: ${option.upDownScaleAmount}');
     if (isOpened) {
       animationController.reverse();
     } else {
