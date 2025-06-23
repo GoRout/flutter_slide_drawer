@@ -92,7 +92,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
         break;
     }
     print(
-        'INIT OPTIONS: limitPercent: $limitPercent, isOpened: $isOpened, size: ${size.width}, upDownScaleAmount: ${option.upDownScaleAmount}');
+        'INIT OPTIONS: limitPercent: $limitPercent, isOpened: $isOpened, upDownScaleAmount: ${option.upDownScaleAmount}');
   }
 
   void _animationSetup() {
@@ -133,7 +133,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   void toggleDrawer() {
     print(
-        'TOGGLE DRAWER: limitPercent: $limitPercent, isOpened: $isOpened, size: ${size.width}, upDownScaleAmount: ${option.upDownScaleAmount}');
+        'TOGGLE DRAWER: limitPercent: $limitPercent, isOpened: $isOpened, upDownScaleAmount: ${option.upDownScaleAmount}');
     if (isOpened) {
       animationController.reverse();
     } else {
