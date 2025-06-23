@@ -48,7 +48,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   bool isOpened = false;
   bool dragPossible = false;
   late double limitPercent =
-      MediaQuery.of(context).size.width > 600 ? 0.80 : 0.55;
+      MediaQuery.of(context).size.width > 600 ? 0.55 : 0.80;
   late SliderDrawerDirection _direction;
   late SliderDrawerOption option;
   late EdgeInsetsGeometry drawerPadding;
