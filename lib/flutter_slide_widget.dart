@@ -81,6 +81,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   void _initOption() {
     option = widget.option ?? SliderDrawerOption();
     _direction = option.direction;
+    limitPercent = size.width > 600 ? 0.55 : 0.80;
     switch (option.sliderEffectType) {
       case SliderEffectType.Rounded:
         upDownScaleAmount = option.upDownScaleAmount;
@@ -118,7 +119,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   void didChangeDependencies() {
     super.didChangeDependencies();
     size = MediaQuery.of(context).size;
-    limitPercent = MediaQuery.of(context).size.width > 600 ? 0.55 : 0.80;
+    limitPercent = size.width > 600 ? 0.55 : 0.80;
     _setDrawerPadding();
   }
 
