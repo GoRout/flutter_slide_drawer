@@ -92,7 +92,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
         break;
     }
     print(
-        'limitPercent: $limitPercent, isOpened: $isOpened, size: ${size.width}, upDownScaleAmount: ${option.upDownScaleAmount}');
+        'wtf limitPercent: $limitPercent, isOpened: $isOpened, size: ${size.width}, upDownScaleAmount: ${option.upDownScaleAmount}');
   }
 
   void _animationSetup() {
@@ -132,7 +132,8 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   }
 
   void toggleDrawerFucker() {
-    print('limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
+    print(
+        'wtf! limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
     if (isOpened) {
       animationController.reverse();
     } else {
@@ -220,7 +221,8 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   @override
   Widget build(BuildContext context) {
-    print('limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
+    print(
+        'wtf!! limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
 
     return Material(
       child: Container(
