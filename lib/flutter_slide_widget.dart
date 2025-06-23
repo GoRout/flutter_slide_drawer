@@ -47,7 +47,7 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   double drawerRate = 0.0;
   bool isOpened = false;
   bool dragPossible = false;
-  late double limitPercent = 0.15;
+  late double limitPercent = 0.95;
   late SliderDrawerDirection _direction;
   late SliderDrawerOption option;
   late EdgeInsetsGeometry drawerPadding;
@@ -56,7 +56,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   @override
   void initState() {
-    print('limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
     super.initState();
     _initOption();
     _animationSetup();
@@ -92,6 +91,8 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
         radiusAmount = 0;
         break;
     }
+    print(
+        'wtf limitPercent: $limitPercent, isOpened: $isOpened, size: ${size.width}, upDownScaleAmount: ${option.upDownScaleAmount}');
   }
 
   void _animationSetup() {
@@ -115,8 +116,6 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   @override
   void didChangeDependencies() {
-    print('limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
-
     super.didChangeDependencies();
     size = MediaQuery.of(context).size;
     _setDrawerPadding();
@@ -133,7 +132,8 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
   }
 
   void toggleDrawerFucker() {
-    print('limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
+    print(
+        'wtf! limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
     if (isOpened) {
       animationController.reverse();
     } else {
@@ -221,7 +221,8 @@ class SliderDrawerWidgetState extends State<SliderDrawerWidget>
 
   @override
   Widget build(BuildContext context) {
-    print('limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
+    print(
+        'wtf!! limitPercent: $limitPercent, isOpened: $isOpened, size: size.width');
 
     return Material(
       child: Container(
